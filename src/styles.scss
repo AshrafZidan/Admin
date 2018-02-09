@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+// @import '../node_modules/normalize.scss/normalize.scss';
+@import './assets/Styles/Vendors/bootstrap.min.scss';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+
+
+@import './assets/Styles/Partials/_Colors.scss';
+
+@import './assets/Styles/Partials/_normalize.scss';
+
+
+* , *:before , *:after{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+background-color:#f5f7fa;
+}
+.center{
+  text-align: center;
+}
+.capital{
+text-transform: uppercase;
+}
+.divider{
+height: 1.3px;
+width: 100%;
+opacity:.8;
+background-color:#ffffff;
+
+}
+a , a:hover , a:focus{
+  color: #ffffff;
+  text-decoration: none;
+}
+.unstyled{
+  list-style: none;
+}

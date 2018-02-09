@@ -1,0 +1,35 @@
+<div class="containr">
+
+<div class="sidebar">
+<div class="overlay">
+
+<!--start brand name-->
+<div class="brand center">
+<img class="img-responsive" src=".././assets/Images/logo.png" alt="logo" draggable="false">
+<h3 class="brand-name capital">Bussniess-IN</h3>
+</div>
+<!--end brand name-->
+
+<!--start admin info-->
+<div class="user center">
+<!--<img class="img-responsive admin-img" src="{{Admin.img}}" alt="Admin image">-->
+<h4 class="admin-name capital">
+  <a href="#">
+    {{Admin.name}}</a>
+  </h4>
+</div>
+<div class="divider"></div>
+<!--end admin info -->
+
+<ul *ngFor="let f of AdminFinctionality" class=" lists">
+  <a href="#" class="center">
+
+  <i class="fa {{f.icon}} fa-2x"></i>
+<li class="list unstyled"> {{f.name}}</li>
+  </a>
+
+</ul>
+</div>
+</div>
+<!--end of sidebar-->
+</div>
