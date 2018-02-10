@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+notfication:number;
+  constructor() {
+this.notfication =5;
+  }
 
   ngOnInit() {
   }

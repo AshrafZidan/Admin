@@ -1,11 +1,9 @@
 $main-font:'Montserrat,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif';
 
-
-
 .sidebar
 {
 // padding: 20px 15px 0;
-width: 220px;
+// max-width: 20vw;
 color:#ffffff;
 background: url('.././assets/Images/04.jpg');
 background-size:cover;
@@ -32,6 +30,7 @@ height:  50px;
 display: inline-block;
 border-radius:50%;
 margin-right: 5px;
+margin-left: 10px;
 vertical-align:middle;
 border-style: none;
 }
@@ -128,7 +127,7 @@ margin-right:-20px;
 }
 
 /* mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 996px) {
     .sidebar{
       left: -220px;
     }
