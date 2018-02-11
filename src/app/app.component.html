@@ -12,21 +12,26 @@
 </div>
 <!--end brand name-->
 
-<!--start admin info-->
+
+<!--
+start admin info
 <div class="user center">
-<!--<img class="img-responsive admin-img" src="{{Admin.img}}" alt="Admin image">-->
+<img class="img-responsive admin-img" src="{{Admin.img}}" alt="Admin image">
 <h4 class="admin-name capital">
   <a href="#">
     {{Admin.name}}</a>
   </h4>
 </div>
-<div class="divider"></div>
+-->
+
+
+<!--<div class="divider"></div>-->
 <!--end admin info -->
 
 <ul *ngFor="let f of AdminFinctionality" class=" lists">
-  <a href="#" class="center">
+  <a href="#" class="">
 
-  <i class="fa {{f.icon}} fa-2x"></i>
+  <i class="fa {{f.icon}}"></i>
 <li class="list unstyled"> {{f.name}}</li>
   </a>
 

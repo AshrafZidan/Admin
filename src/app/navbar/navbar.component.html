@@ -9,13 +9,28 @@
 
 <div class="tools">
 <div class="notfication">
-<i class="fa fa-bell-o" aria-hidden="true"></i>
+<i class="fa fa-bell-o notfi-icon" aria-hidden="true"></i>
 <span class="notfi-num">{{notfication}}</span>
 <!--<i class="fa fa-arrow-down" aria-hidden="true"></i>-->
+<div class="notfication-container">
+
+<ul class="notfialtion-list hideen" *ngFor="let notfi of notfication_list">
+  <li class="unstyled notfi-list">
+    <i class="fa fa-bell-o fa-2x {{notfi.type}}" aria-hidden="true"></i>
+    <h4 class="notfcation-head {{notfi.type}}">{{notfi.head}}</h4>
+    <p class="description">{{notfi.describtion}}</p>
+
+  </li>
+
+
+</ul>
+<p class="read center">Read All Notficatons</p>
+</div>
 </div>
 <!--<end notfcation -->
 <div class="user">
 <i class="fa fa-user-circle" aria-hidden="true"></i>
+<!--<p class="Admin-name">{{Admin}}</p>-->
 <!--<i class="fa fa-arrow-down" aria-hidden="true"></i>-->
 
 </div>

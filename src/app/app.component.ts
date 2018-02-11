@@ -11,8 +11,8 @@ AdminFinctionality : Array<object>;
 Admin;
   constructor() {
     this.AdminFinctionality = [
-      {'name':'Charts' , 'icon':'fa-facebook'},
-      {'name':'Forms','icon':'fa-edit'}
+      {'name':'Dashboard' , 'icon':'fa-home'},
+      {'name':'Inbox','icon':'fa-envelope-o'}
 
     ];
     this.Admin={'name': 'Ashraf Zidan','img':'.././assets/Images/Admin.png'}

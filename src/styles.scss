@@ -8,6 +8,10 @@
 
 @import './assets/Styles/Partials/_normalize.scss';
 
+$infoColor:#1cbcd8;
+$AddColor:#ff8d60;
+$warningColor:#ff586b;
+$main-font: 'Rubik', sans-serif;
 
 * , *:before , *:after{
     box-sizing: border-box;
@@ -17,6 +21,7 @@
 body{
 background-color:#f5f7fa;
 overflow-x: hidden;
+font-family:$main-font;
 }
 .center{
   text-align: center;
@@ -37,4 +42,20 @@ a , a:hover , a:focus{
 }
 .unstyled{
   list-style: none;
+}
+.description{
+  padding: 0;
+  margin: 0;
+  margin-bottom:25px;
+  color: #6c757d;
+  font-size: 85%;
+}
+.info{
+color:$infoColor;
+}
+.Add{
+color:$AddColor;
+}
+.warning{
+  color:$warningColor;
 }
