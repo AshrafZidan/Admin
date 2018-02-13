@@ -3,17 +3,26 @@ $darkgray:#7a7b7d;
 $notfi_color:#ff586b;
 $border_color:#cfd8dc;
 $lightgray:#f1f4f6;
-
+$text-color: #6c757d;
+$dropdownolor:#f8f9fa;
 
 $main-font: 'Rubik', sans-serif;
 
 .custom-nav{
 
-  padding-top: 25px;
+  .responsive{
+    color: #313233;
+    cursor: pointer;
+    display: none;
+  }
+  padding-top: 20px;
+  padding-left: 20px;
 
 .search{
   float: left;
     position: relative;
+        margin-left: 65px;
+
   input[type="search"]{
       min-width:230px;
       padding:10px;
@@ -23,7 +32,8 @@ $main-font: 'Rubik', sans-serif;
     outline: none;
   }
 input[type="search"]:focus, input[type="search"]:hover{
-      outline: none;
+      border-color: #2972ec;
+      // background-color: red;
   }
   .search-icon{
     position: absolute;
@@ -34,15 +44,15 @@ input[type="search"]:focus, input[type="search"]:hover{
   }
 }
 .tools{
-  float: right;
+float: right;
 padding-right: 2.5rem;
 margin-right:2rem;
 font-size: 18px;
 }
-.notfication , .user{
-display: inline-block;
-padding: 0 10px;
-margin-right: 10px;
+.notfication {
+  display: inline-block;
+  padding: 0 10px;
+margin-right: 8px;
 position: relative;
 color: rgba(0,0,0,.5);
 cursor: pointer;
@@ -88,12 +98,12 @@ color: rgba(0,0,0,1);
 
 }
 
-.notfication-container{
+.notfication-container {
   z-index: 9999;
   min-width: 400px;
   position: absolute;
-  top: 35px;
-  right: 0;
+  top: 30px;
+    right: -20px;
   border: 1px solid $border_color;
   background-color: #ffffff;
   border-radius:5px;
@@ -147,22 +157,159 @@ padding-bottom: 7px;
 
 
 .user{
-display: inline-block;
-padding: 0 10px;
+ display: inline-block;
+  padding: 0 10px;
+position: relative;
+color: rgba(0,0,0,.5);
+cursor: pointer;
+transition:color .5s ease-in-out;
+-o-transition:color .5s ease-in-out;
+-moz-transition:color .5s ease-in-out;
+&:hover .circle{
+color: rgba(0,0,0,1);
 
+}
+.Admin-name{
+  display: inline-block;
+}
 
 &:after{
-
-  left: 33px;
-
+content: '';
+  position: absolute;
+   bottom: 25px;
+  right: -7px;
+  display: block;
+border-right:6px solid transparent;
+border-left:6px solid transparent;
+border-top:6px solid $darkgray;
 }
 
 &:before{
+content: '';
+  position: absolute;
+   bottom: 25px;
+  right: -7px;
+  display: block;
+border-right:6px solid transparent;
+border-left:6px solid transparent;
+border-top:6px solid #eee;
+}
+.user-container{
+  // max-width: 100px;
+  font-size: 16px;
+   z-index: 9999;
+  position: absolute;
+      top: 50px;
+    right: -7px;
+  border: 1px solid $border_color;
+  background-color: #ffffff;
+  border-radius:5px;
 
-  left: 33px;
+  .user-list{
+    // padding: 10px 0px 5px 12px;
+        // margin-bottom: 8px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 10px;
+    padding-bottom: 7px;
+        padding-right: 0;
+        padding-left: 0;
+      &:last-child{
+        padding-top: 15;
+        padding-bottom: 12px;
+    border-top: 1px solid $border_color;
+      }
 
+
+    &:hover{
+      background-color: $lightgray;
+    }
+    .user-icon{
+      display: inline-block;
+      color: $darkgray;
+      padding-right: 8px;
+      padding-left: 22px;
+    }
+    .user-lis{
+      color: $text-color;
+      display: inline-block;
+          // margin-right: 12px;
+            padding-right: 16px;
+
+
+    }
+  }
+}
 }
 
 }
 
+
+/* mobile */
+
+
+@media only screen and (max-width: 998px) {
+
+.notfication-container{
+   min-width: 200px !important;
+  .notfialtion-list{
+
+  .notfi-list {
+    i{
+      font-size: 24px !important;
+    }
+    h4{
+      margin-bottom: 0 !important;
+      font-size: 13px !important;
+      font-weight: 500 !important;
+    }
+    .description{
+      margin-bottom: 0 !important;
+      font-size: 60% !important;
+
+    }
+
+  }
+  }
+
+  .read{
+          font-size: 12px !important;
+
+    }
+}
+    .responsive{
+   display: block !important;
+    position: absolute;
+    top:28px ;
+    right: 285px;
+    }
+    .tools{
+      position: absolute;
+     top: 13px ;
+    right: 15px;
+    }
+    .search{
+        // margin: 0 auto;
+        margin-left: 0px !important;
+    }
+}
+
+
+@media only screen and (max-width: 668px) {
+  .search{
+    input[type="search"]{
+
+    min-width: 150px !important;
+    }
+  }
+  .responsive{
+    right: 240px !important;
+  }
+  .tools{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+
+    right: 42px !important;
+      }
 }
