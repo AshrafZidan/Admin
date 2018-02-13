@@ -1,11 +1,12 @@
 // $main-font:'Montserrat,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif';
+$hoverColor:#ff6a07;
 
 .sidebar
 {
 
 width: 250px;
 color:#ffffff;
-background: url('.././assets/Images/04.jpg');
+background: #fff url('.././assets/Images/05.jpg')50% 50% no-repeat;
 background-size:cover;
 height: 100vh;
 position: fixed;
@@ -15,7 +16,8 @@ left: 0;
 bottom: 0;
 .overlay{
 // background: linear-gradient(45deg,#1a2a6c,#b21f1f,.8) ;
-background: rgba(0,0,0,.8);
+background: rgba(7,34,62,.8);
+
 height: 100vh;
 
 }
@@ -39,6 +41,11 @@ h3{
   // font-family:$main-font;
   letter-spacing: 1.5px;
   margin-right: 25px;
+  .in{
+    color: $hoverColor;
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 }
 // .user{
@@ -119,7 +126,12 @@ font-size: 20px;
     margin-right: 5px;
     line-height: 2rem;
     width: 35px;
-    text-align: center
+    text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+            height: 30px;
+    font-size: 15px;
+    line-height: 30px;
   }
 }
 .lists:hover {
@@ -128,7 +140,7 @@ font-size: 20px;
 }
 .lists:hover .list {
   // background-color:red;
-  // color:#ffffff;
+  color:$hoverColor;
 }
 
 /* mobile */

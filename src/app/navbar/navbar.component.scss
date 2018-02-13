@@ -2,28 +2,32 @@
 $darkgray:#7a7b7d;
 $notfi_color:#ff586b;
 $border_color:#cfd8dc;
-$lightgray:#f1f4f6;
+$darkBlue: rgb(44, 67, 91);
+$lightBlue:#516478;
+
 $text-color: #6c757d;
 $dropdownolor:#f8f9fa;
-
-
+$navColor:linear-gradient(90deg,#061e38 0,#516478);
+$hoverColor:#ff6a07;
 
 $main-font: 'Rubik', sans-serif;
 
 .custom-nav{
+  background: $navColor;
+      padding-top: 13px;
+      padding-bottom: 10px;
+      position: relative;
 
   .responsive{
     color: #313233;
     cursor: pointer;
     display: none;
   }
-  padding-top: 20px;
-  padding-left: 20px;
 
 .search{
-  float: left;
     position: relative;
         margin-left: 65px;
+        display: inline-block;
 
   input[type="search"]{
       min-width:300px;
@@ -31,24 +35,26 @@ $main-font: 'Rubik', sans-serif;
       border-radius:50px;
       border: 1px solid #a6a9ae;
     color: #75787d;
+    font-size: 14px;
     outline: none;
   }
 input[type="search"]:focus, input[type="search"]:hover{
-      border-color: #2972ec;
-      // background-color: red;
+      border-color: $hoverColor;
+
   }
   .search-icon{
     position: absolute;
     top: 10px;
     right: 15px;
 
-    color: #a6a9aa;
+    color: #3a597b;
   }
 }
 .tools{
 float: right;
 padding-right: 2.5rem;
 // margin-right:2rem;
+padding-top: 2px;
 font-size: 18px;
 }
 .notfication {
@@ -61,6 +67,7 @@ cursor: pointer;
 
 .notfi-icon{
   font-size: 28px;
+  color: #ffffff;
   transition:all .5s ease-in-out;
 -o-transition:all .5s ease-in-out;
 -moz-transition:all .5s ease-in-out;
@@ -72,7 +79,7 @@ border-radius: 100%;
     font-weight: 600;
     font-size: 85%;top: -17px;
 right: -6px;
-background-color:$notfi_color;
+background-color:$darkBlue;
 color:#ffffff;
 }
 
@@ -99,7 +106,7 @@ color:#ffffff;
 // }
 
 &:hover .notfi-icon{
-color: rgba(0,0,0,1);
+color:$hoverColor;
 
 }
 
@@ -107,16 +114,27 @@ color: rgba(0,0,0,1);
   z-index: 9999;
   min-width: 400px;
   position: absolute;
-  top: 35px;
+  top: 41px;
     right: 0px;
-  border: 1px solid $border_color;
-  background-color: #ffffff;
+  border: 1px solid $darkBlue;
+  background-color: $lightBlue;
   border-radius:5px;
 
+&:before{
+
+  border: 10px solid transparent;
+    border-bottom-color: $lightBlue;
+    bottom: 100%;
+    content: "";
+    right: 3px;
+    margin: 0 0 0 -10px;
+    position: absolute;
+
+}
 
 .notfialtion-list{
 
-border-bottom:1px solid $border_color;
+border-bottom:1px solid $darkBlue;
 margin-top: 0;
 margin-bottom: 0;
 padding-top: 15px;
@@ -130,7 +148,7 @@ padding-bottom: 7px;
 
 
     &:hover{
-  background-color:$lightgray;
+  background-color:$darkBlue;
 }
 
   .notfcation-head{
@@ -166,18 +184,11 @@ display: inline-block;
 padding: 0 10px;
 width: 60px;
 position: relative;
-color: rgba(0,0,0,.5);
 cursor: pointer;
 transition:color .5s ease-in-out;
 -o-transition:color .5s ease-in-out;
 -moz-transition:color .5s ease-in-out;
-&:hover .circle{
-color: rgba(0,0,0,1);
 
-}
-// .Admin-name{
-//   display: inline-block;
-// }
 .admin-img{
 width: 40px;
 height: 40px;
@@ -215,9 +226,21 @@ margin-bottom: 13px;
   position: absolute;
       top: 50px;
     right: -7px;
-  border: 1px solid $border_color;
-  background-color: #ffffff;
+  border: 1px solid $darkBlue;
+  background-color: $lightBlue;
   border-radius:5px;
+
+  &:before{
+
+  border: 10px solid transparent;
+    border-bottom-color: $lightBlue;
+    bottom: 100%;
+    content: "";
+    right: 24px;
+    margin: 0 0 0 -10px;
+    position: absolute;
+
+}
 
   .user-list{
 
@@ -233,16 +256,16 @@ margin-bottom: 13px;
 
 
     &:hover{
-      background-color: $lightgray;
+      background-color: $darkBlue;
     }
     .user-icon{
       display: inline-block;
-      color: $darkgray;
+      color: #ffffff;
       margin-right: 8px;
 
     }
     .user-lis{
-      color: $text-color;
+      color: #fff;
       display: table-header-group;
           // margin-right: 12px;
             padding-right: 16px;
@@ -260,7 +283,9 @@ margin-bottom: 13px;
 
 
 @media only screen and (max-width: 998px) {
-
+  .search{
+    padding-left: 20px !important;
+  }
 .notfication-container{
    min-width: 200px !important;
   .notfialtion-list{
@@ -281,13 +306,12 @@ margin-bottom: 13px;
     }
 
   }
+
   }
 
-  .read{
-          font-size: 12px !important;
-
-    }
 }
+
+
     .responsive{
    display: block !important;
     position: absolute;
@@ -307,6 +331,14 @@ margin-bottom: 13px;
     }
 }
 
+.read{
+
+          padding: 0;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 400
+
+    }
 
 @media only screen and (max-width: 668px) {
   .search{
