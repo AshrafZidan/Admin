@@ -6,6 +6,8 @@ $lightgray:#f1f4f6;
 $text-color: #6c757d;
 $dropdownolor:#f8f9fa;
 
+
+
 $main-font: 'Rubik', sans-serif;
 
 .custom-nav{
@@ -24,7 +26,7 @@ $main-font: 'Rubik', sans-serif;
         margin-left: 65px;
 
   input[type="search"]{
-      min-width:230px;
+      min-width:300px;
       padding:10px;
       border-radius:50px;
       border: 1px solid #a6a9ae;
@@ -51,47 +53,50 @@ font-size: 18px;
 }
 .notfication {
   display: inline-block;
-  padding: 0 10px;
-margin-right: 8px;
+  // padding: 0 10px;
+// margin-right: 8px;
 position: relative;
 color: rgba(0,0,0,.5);
 cursor: pointer;
-transition:color .5s ease-in-out;
--o-transition:color .5s ease-in-out;
--moz-transition:color .5s ease-in-out;
 
+.notfi-icon{
+  font-size: 28px;
+  transition:all .5s ease-in-out;
+-o-transition:all .5s ease-in-out;
+-moz-transition:all .5s ease-in-out;
+}
 .notfi-num{
 position: absolute;
 border-radius: 100%;
     padding: 1px 6px;
     font-weight: 600;
-    font-size: 85%;top: -15px;
-right: 0px;
+    font-size: 85%;top: -17px;
+right: -6px;
 background-color:$notfi_color;
 color:#ffffff;
 }
 
-&:after{
-content: '';
-  position: absolute;
-   bottom: 7px;
-  left: 35px;
-  display: block;
-border-right:6px solid transparent;
-border-left:6px solid transparent;
-border-top:6px solid $darkgray;
-}
+// &:after{
+// content: '';
+//   position: absolute;
+//    bottom: 7px;
+//   left: 35px;
+//   display: block;
+// border-right:6px solid transparent;
+// border-left:6px solid transparent;
+// border-top:6px solid $darkgray;
+// }
 
-&:before{
-content: '';
-  position: absolute;
- bottom: 7px;
-  left: 35px;
-  display: block;
-border-right:6px solid transparent;
-border-left:6px solid transparent;
-border-top:6px solid #eee;
-}
+// &:before{
+// content: '';
+//   position: absolute;
+//  bottom: 7px;
+//   left: 35px;
+//   display: block;
+// border-right:6px solid transparent;
+// border-left:6px solid transparent;
+// border-top:6px solid #eee;
+// }
 
 &:hover .notfi-icon{
 color: rgba(0,0,0,1);
@@ -102,8 +107,8 @@ color: rgba(0,0,0,1);
   z-index: 9999;
   min-width: 400px;
   position: absolute;
-  top: 30px;
-    right: -20px;
+  top: 35px;
+    right: 0px;
   border: 1px solid $border_color;
   background-color: #ffffff;
   border-radius:5px;
@@ -157,8 +162,9 @@ padding-bottom: 7px;
 
 
 .user{
- display: inline-block;
-  padding: 0 10px;
+display: inline-block;
+padding: 0 10px;
+width: 60px;
 position: relative;
 color: rgba(0,0,0,.5);
 cursor: pointer;
@@ -169,34 +175,42 @@ transition:color .5s ease-in-out;
 color: rgba(0,0,0,1);
 
 }
-.Admin-name{
-  display: inline-block;
+// .Admin-name{
+//   display: inline-block;
+// }
+.admin-img{
+width: 40px;
+height: 40px;
+border-radius: 100%;
+display: inline-block;
+margin-bottom: 13px;
 }
 
-&:after{
-content: '';
-  position: absolute;
-   bottom: 25px;
-  right: -7px;
-  display: block;
-border-right:6px solid transparent;
-border-left:6px solid transparent;
-border-top:6px solid $darkgray;
-}
+// &:after{
+// content: '';
+//   position: absolute;
+//    bottom: 25px;
+//   right: -7px;
+//   display: block;
+// border-right:6px solid transparent;
+// border-left:6px solid transparent;
+// border-top:6px solid $darkgray;
+// }
 
-&:before{
-content: '';
-  position: absolute;
-   bottom: 25px;
-  right: -7px;
-  display: block;
-border-right:6px solid transparent;
-border-left:6px solid transparent;
-border-top:6px solid #eee;
-}
+// &:before{
+// content: '';
+//   position: absolute;
+//    bottom: 25px;
+//   right: -7px;
+//   display: block;
+// border-right:6px solid transparent;
+// border-left:6px solid transparent;
+// border-top:6px solid #eee;
+// }
 .user-container{
-  // max-width: 100px;
-  font-size: 16px;
+      min-width: 132px;
+
+  font-size: 15px;
    z-index: 9999;
   position: absolute;
       top: 50px;
@@ -206,14 +220,11 @@ border-top:6px solid #eee;
   border-radius:5px;
 
   .user-list{
-    // padding: 10px 0px 5px 12px;
-        // margin-bottom: 8px;
+
         margin-bottom: 0;
         margin-top: 0;
-        padding-top: 10px;
-    padding-bottom: 7px;
-        padding-right: 0;
-        padding-left: 0;
+        padding: 10px 20px 7px 20px;
+
       &:last-child{
         padding-top: 15;
         padding-bottom: 12px;
@@ -227,12 +238,12 @@ border-top:6px solid #eee;
     .user-icon{
       display: inline-block;
       color: $darkgray;
-      padding-right: 8px;
-      padding-left: 22px;
+      margin-right: 8px;
+
     }
     .user-lis{
       color: $text-color;
-      display: inline-block;
+      display: table-header-group;
           // margin-right: 12px;
             padding-right: 16px;
 
@@ -280,8 +291,10 @@ border-top:6px solid #eee;
     .responsive{
    display: block !important;
     position: absolute;
-    top:28px ;
-    right: 285px;
+    top:22px ;
+    right: 174px;
+    font-size: 26px;
+    color: $darkgray;
     }
     .tools{
       position: absolute;
@@ -303,7 +316,7 @@ border-top:6px solid #eee;
     }
   }
   .responsive{
-    right: 240px !important;
+    right: 146px !important;
   }
   .tools{
     padding-left: 0 !important;
