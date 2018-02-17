@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-// @import '../node_modules/normalize.scss/normalize.scss';
-@import './assets/Styles/Vendors/bootstrap.min.scss';
-@import '../node_modules/font-awesome/css/font-awesome.min.css';
 
+
+
+// @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
+@import './assets/Styles/css/fontawesome-all.min.css';
 
 @import './assets/Styles/Partials/_Colors.scss';
 
@@ -19,10 +22,13 @@ $main-font: 'Rubik', sans-serif;
     -webkit-box-sizing: border-box;
 }
 body{
-background-color:#f5f7fa;
-overflow-x: hidden;
+// background-color:#516478;
+
+position: relative;
+height: 2000px;
 font-family:$main-font;
 }
+
 .center{
   text-align: center;
 }
@@ -75,4 +81,21 @@ color:$AddColor;
   bottom: 0;
   background-color: rgba(0, 0, 0, .3);
   z-index: 999999;
+}
+
+.col-md-10 {
+padding: 0 !important;
+}
+.row{
+  margin-right: 0;
+}
+.hideen{
+  display: none !important;
+}
+.hidden{
+  display: none;
+}
+.hidden-inpt{
+  visibility: hidden;
+
 }

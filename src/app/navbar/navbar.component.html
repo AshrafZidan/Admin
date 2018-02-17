@@ -1,5 +1,10 @@
+
+
 <nav class="custom-nav">
+
+
 <i class="fa fa-align-justify fa fa-2x responsive" (click)="opensidebar()" aria-hidden="true"></i>
+
 
 <div class="search">
 <input type="search" placeholder="Search.." onclick="">
@@ -10,15 +15,16 @@
 </div>
 
 <div class="tools">
-<div class="notfication dropdown-menu">
-<i class="fa fa-bell-o notfi-icon" aria-hidden="true"></i>
+<div class="notfication dropdown">
+<i class="far fa-bell notfi-icon"></i>
 <span class="notfi-num">{{notfication}}</span>
 <!--<i class="fa fa-arrow-down" aria-hidden="true"></i>-->
 <div class="notfication-container list-item hide click-outside">
 
 <ul class="notfialtion-list" *ngFor="let notfi of notfication_list">
   <li class="unstyled notfi-list">
-    <i class="fa fa-bell-o fa-2x {{notfi.type}}" aria-hidden="true"></i>
+
+    <i class="far fa-bell {{notfi.type}}" aria-hidden="true"></i>
     <h4 class="notfcation-head {{notfi.type}}">{{notfi.head}}</h4>
     <p class="description">{{notfi.describtion}}</p>
 
@@ -32,25 +38,24 @@
 
 <!--<end notfcation -->
 
-<div class="user dropdown-menu">
+<div class="user dropdown">
 <!--<i class="fa fa-user-circle circle" aria-hidden="true"></i>
 -->
 <img src="./../assets/Images/admin.jpg" alt="user-image" class="img-responsive admin-img">
 <!--<p class="Admin-name">{{Admin}}</p>-->
 <!--<i class="fa fa-arrow-down" aria-hidden="true"></i>-->
 
+
 <div class="user-container hide list-item click-outside">
 <ul class="user-list" *ngFor="let user of User_list">
-<a href="#">
+<a routerLink="{{user.url}}"  routerLinkActive="active">
 <i class="{{user.icon}} user-icon"></i>
 <li class="unstyled user-lis">{{user.name}}</li>
 </a>
 </ul>
-<!--sdasda-->
 </div>
 
 </div>
 </div>
-
 <!--<end tool div> -->
 </nav>

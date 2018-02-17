@@ -1,0 +1,164 @@
+// $main-font:'Montserrat,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif';
+$hoverColor:#ff6a07;
+
+.sidebar
+{
+
+width: 240px;
+color:#ffffff;
+background: #fff url('../.././assets/Images/05.jpg')50% 50% no-repeat;
+background-size:cover;
+height: 100vh;
+position: fixed;
+z-index: 7;
+top: 0;
+left: 0;
+bottom: 0;
+.overlay{
+// background: linear-gradient(45deg,#1a2a6c,#b21f1f,.8) ;
+background: rgba(7,34,62,.8);
+
+height: 100vh;
+
+}
+
+.brand{
+cursor: pointer;
+background: #061e38;
+    box-shadow: 0 5px 5px -4px rgba(0,0,0,.25);
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+
+img{
+width: 50px;
+height:  50px;
+display: inline-block;
+
+vertical-align:middle;
+// border-style: none;
+}
+
+h3{
+  display:inline-block;
+  // font-family:$main-font;
+  letter-spacing: 1.5px;
+  // margin-right: 25px;
+  font-size: 24px;
+  .in{
+    color: $hoverColor;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+}
+// .user{
+//   // padding: 10px;
+//   // width: 100%;
+// .admin-img
+// {
+// width:50px;
+// height: 50px;
+// display: inline-block;
+// border-radius:50%;
+// vertical-align:top;
+// float: left;
+// }
+// .admin-name{
+// font-family:$main-font;
+// letter-spacing: 2px;
+// }
+// }
+
+
+}
+
+.control{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+.area{
+position: absolute;
+top:0;
+left: 0;
+width: 30px;
+background:linear-gradient(45deg,#1a2a6c,#b21f1f) ;
+height: 100vh;
+
+}
+
+.sidebarToggle{
+background-color:#1a2a6c;
+border-radius: 3px;
+padding: 10px;
+position: relative;
+float: left;
+
+}
+.bar{
+color:#ffffff
+}
+}
+
+.lists{
+  padding: 15px;
+  margin: 0;
+  margin-bottom: 7px;
+
+-moz-transition:all .4s ease-in-out;
+-o-transition:all .4s ease-in-out;
+-webkit-transition:all .4s ease-in-out;
+transition:all .4s ease-in-out;
+
+&:first-of-type{
+  margin-top: 20px !important;
+}
+
+.list{
+    display: block;
+    overflow: hidden;
+    line-height: 2rem;
+    background-color: transparent;
+    display: inline;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing:1px;
+    color: #f3f1f0;
+    cursor: pointer;
+
+
+}
+
+i{
+font-size: 20px;
+    margin-right: 5px;
+    line-height: 2rem;
+    width: 35px;
+    text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+            height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+.lists:hover {
+
+  background-color: rgba(139	,134	,134,.4);
+}
+.lists:hover .list {
+  // background-color:red;
+  color:$hoverColor;
+}
+
+/* mobile */
+@media only screen and (max-width: 998px) {
+    .sidebar{
+      display: none;
+    }
+
+}
+
+
+

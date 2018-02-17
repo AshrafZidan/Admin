@@ -1,50 +1,19 @@
 <div class="containr">
 <div class="row" >
-<div class="col-md-2">
+ <div class="col-md-2">
+   <app-sidebar></app-sidebar>
 
-<div class="sidebar click-outside">
-<div class="overlay">
-
-<!--start brand name-->
-<div class="brand center">
-<img class="img-responsive" src=".././assets/Images/logo.png" alt="logo" draggable="false">
-<h3 class="brand-name capital">Bussniess<span class="in"> -IN </span></h3>
-</div>
-<!--end brand name-->
-
-
-<!--
-start admin info
-<div class="user center">
-<img class="img-responsive admin-img" src="{{Admin.img}}" alt="Admin image">
-<h4 class="admin-name capital">
-  <a href="#">
-    {{Admin.name}}</a>
-  </h4>
-</div>
--->
-
-
-<!--<div class="divider"></div>-->
-<!--end admin info -->
-
-<ul *ngFor="let f of AdminFinctionality" class=" lists">
-  <a href="#" class="">
-
-  <i class="fa {{f.icon}}"></i>
-<li class="list unstyled"> {{f.name}}</li>
-  </a>
-
-</ul>
-</div>
-</div>
-</div><!-- col -->
-<!--end of sidebar-->
-
+   </div>
 <!--call navbar-->
-<div class="nav col-md-10">
+<div class="col-md-10">
 
 <app-navbar></app-navbar>
+
+<router-outlet></router-outlet>
+
 </div>
-</div><!-- row -->
+
+</div>
+
+<!-- row -->
 </div> <!-- container -->

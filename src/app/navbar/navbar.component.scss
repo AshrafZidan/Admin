@@ -11,12 +11,20 @@ $navColor:linear-gradient(90deg,#061e38 0,#516478);
 $hoverColor:#ff6a07;
 
 $main-font: 'Rubik', sans-serif;
-
+body{
+  position: relative;
+}
 .custom-nav{
   background: $navColor;
       padding-top: 13px;
       padding-bottom: 10px;
-      position: relative;
+  //     position: -webkit-sticky;
+  //   position: -moz-sticky;
+  //   position: -ms-sticky;
+  //   position: -o-sticky;
+  //   position: sticky;
+
+  // top: 0; /* required */
 
   .responsive{
     color: #313233;
@@ -25,7 +33,7 @@ $main-font: 'Rubik', sans-serif;
   }
 
 .search{
-    position: relative;
+      position: relative;
         margin-left: 65px;
         display: inline-block;
 
