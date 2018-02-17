@@ -95,7 +95,7 @@ export class ProfileComponent implements OnInit {
    //do this for every edit  icon
    icon.click(function(){
     var $this = $(this);
-     $this.addClass('tt');
+
 
      $this.parent('.cont').parent('.test').find('.inpt').toggleClass('hidden');
     // console.log("Clicked");

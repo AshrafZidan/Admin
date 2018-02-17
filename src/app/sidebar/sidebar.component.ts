@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-declare var $:any;
+// declare var $:any;
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -26,11 +27,6 @@ Admin_Name:string;
     this.Admin={'name': 'Ashraf Zidan','img':'.././assets/Images/Admin.png'}
   }
 
-//function to open slidebar
-openSidebar(){
-  console.log('====================================');
-  $('.sidebar').toggleClass('open-sidebar');
-}
 
 
 

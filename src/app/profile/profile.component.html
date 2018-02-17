@@ -31,12 +31,13 @@
 <div class="sm-content">
 <div class="name  test form-group">
 
-<div class="cont">
-<label for="Admin-name">Admin :</label>
-<span id="Admin-name" class="p"> {{Admin.Name}} </span>
-<i class="fas fa-edit icn"></i>
+  <div class="cont">
+    <i class="fas fa-user-plus fa-lg"></i>
+    <label for="Admin-name">Admin :</label>
+    <span id="Admin-name" class=""> {{Admin.Name}} </span>
+    <i class="fas fa-edit icn"></i>
 
-</div>
+  </div>
 <input  id="name" name="name" class="form-control inpt hidden" required minlength="4" [(ngModel)]="Admin.Name" #name="ngModel">
 <!--start error message-->
 <!--<div *ngIf="fname.invalid && fname.dirty"
@@ -51,20 +52,19 @@
 
 </div>-->
 <!--end error message-->
-<div *ngIf="name.invalid && name.dirty" class="alert alert-danger danger">
-                <div [hidden]="! name.errors.required">
+  <div *ngIf="name.invalid && name.dirty" class="alert alert-danger danger">
+      <div [hidden]="! name.errors.required">
                  Names Required
-                </div>
-                <div  [hidden]="! name.errors.minlength">
+      </div>
+      <div  [hidden]="! name.errors.minlength">
                 At Least 4 Character
-            </div>
-            </div>
-
-
+    </div>
+  </div>
 </div>
 <!--end first name div-->
 
-<div class="Email form-group">
+<div class="Email test form-group">
+
 <div class="cont">
 <label for="Email">Email :</label>
 <span id="Email" class="Admin-Email">{{Admin.Email}}</span>
@@ -72,7 +72,7 @@
 </div>
 
 
-   <input id="Email" name="Email" class="form-control hidden" required  [(ngModel)]="Admin.Email"  #Email="ngModel" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+   <input id="Email"  name="Email" class="form-control inpt hidden" required  [(ngModel)]="Admin.Email"  #Email="ngModel" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
 
             <div *ngIf="Email.invalid && Email.dirty" class="danger">
                 <div [hidden]="! Email.errors.required">
@@ -88,7 +88,7 @@
 <!--end Email div-->
 
 <!--star Address-->
-<div class="Address form-group">
+<div class="Address test form-group">
 
 <div class="cont">
 <label for="Address">Address :</label>
@@ -96,7 +96,7 @@
 <i class="fas fa-edit icn"></i>
 </div>
 
-   <input  id="Address" name="Address" class="form-control hidden" required  [(ngModel)]="Admin.Address"  #Address="ngModel">
+   <input  id="Address" name="Address" class="form-control inpt hidden" required  [(ngModel)]="Admin.Address"  #Address="ngModel">
 <div *ngIf="Address.invalid && Address.dirty" class="danger">
                 <div [hidden]="! fname.errors.required">
                   Address Required
