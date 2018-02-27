@@ -72,7 +72,7 @@
 
 
 <div class="user-container dropdown-menu">
-  <a class="dropdown-item user-list" *ngFor="let user of User_list"  href="#">
+  <a class="dropdown-item user-list" *ngFor="let user of User_list"  routerLink="{{user.url}}"  href="#">
     <i class="{{user.icon}} user-icon"></i>
       {{user.name}}
 

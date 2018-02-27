@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -19,7 +20,8 @@ import { ProfileComponent } from './profile/profile.component';
     SidebarComponent,
     NavbarComponent,
     ProfileComponent,
-    EqualValidator
+    EqualValidator,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

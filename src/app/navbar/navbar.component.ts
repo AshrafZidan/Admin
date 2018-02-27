@@ -23,7 +23,7 @@ this.notfication_list =  [{head:"New Order Recived",describtion:'Lorem ipsum dol
 {head:"New Order Recived",describtion:'Lorem ipsum dolor sit ametitaque in,Lorem ipsum dolor sit ametitaque in,Lorem ipsum dolor sit ametitaque in, et!',type:'Add'} ,{head:"New Order Recived",describtion:'Lorem ipsum dolor sit ametitaque in, et!',type:'warning'}];
 
 
-this.User_list =  [{name:"profile",icon:'fa fa-user',url:"profile/"+this.id},{name:"Inbox",icon:'fa fa-envelope'},{name:"Settings",icon:'fa fa-cog'},{name:"Logout",icon:'fa fa-sign-out'}
+this.User_list =  [{name:"profile",icon:'fa fa-user',url:"/profile"},{name:"Inbox",icon:'fa fa-envelope'},{name:"Settings",icon:'fa fa-cog'},{name:"Logout",icon:'fa fa-sign-out'}
 
 ];
 
