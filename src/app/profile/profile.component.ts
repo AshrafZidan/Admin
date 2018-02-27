@@ -94,6 +94,9 @@ export class ProfileComponent implements OnInit {
 
     if (! hiddenInput.hasClass('hidden') ) {
 
+
+
+
       // $('#confirm-btn').addClass('hidden');
       }
     // else{
