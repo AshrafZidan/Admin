@@ -14,6 +14,8 @@
 $infoColor:#1cbcd8;
 $AddColor:#ff8d60;
 $warningColor:#ff586b;
+$dangerColor: #e84118;
+$confirmbtn:#5cba34;
 $main-font: 'Rubik', sans-serif;
 
 * , *:before , *:after{
@@ -22,7 +24,7 @@ $main-font: 'Rubik', sans-serif;
     -webkit-box-sizing: border-box;
 }
 body{
-// background-color:#516478;
+background-color:#ffffff;
 
 position: relative;
 height: 2000px;
@@ -54,6 +56,7 @@ a , a:hover , a:focus{
   margin: 0;
   margin-bottom:25px;
   color: #ffffff;
+  word-wrap: break-word;
   font-size: 15px;
 }
 .info{
@@ -71,16 +74,16 @@ color:$AddColor;
 .hide{
   display: none;
 }
-.wrapper{
+.Wrapper{
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .3);
-  z-index: 999999;
+  background-color: rgba(0,0,0,.8);
+  z-index: 4;
 }
 
 .col-md-10 {
@@ -98,4 +101,34 @@ padding: 0 !important;
 .hidden-inpt{
   visibility: hidden;
 
+}
+.opens{
+  left: 0 !important;
+}
+
+// .closes{
+//   // display: none !important;
+//   left: 0px !important;
+// }
+.danger{
+  font-size: 17px;
+    font-weight: 400;
+  margin: 0.5rem 1.5rem;
+  color: $dangerColor;
+&>div{
+display: inline;
+}
+&::after{
+content: '*';
+
+}
+
+}
+
+.confirm-btn{
+  background-color:$confirmbtn !important;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
 }

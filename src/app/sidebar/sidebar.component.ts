@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// declare var $:any;
 
 @Component({
   selector: 'app-sidebar',
@@ -8,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-
 AdminFinctionality : Array<object>;
-Admin;
-Admin_Name:string;
+
   constructor() {
       this.AdminFinctionality = [
       {'name':'Dashboard' , 'icon':'fa-home'},
@@ -24,13 +21,14 @@ Admin_Name:string;
       {'name':'Charts','icon':'fas fa-chart-line'}
 
     ];
-    this.Admin={'name': 'Ashraf Zidan','img':'.././assets/Images/Admin.png'}
   }
 
 
 
 
   ngOnInit() {
+
   }
+
 
 }

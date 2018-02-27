@@ -1,22 +1,19 @@
-<div class="profile row ">
-  <div class="admin-container col-md-4 col-xs-12">
-    <div class="sm-container">
+<div class="profile">
+<div class="">
+  <h3 class="head">Edit Profile</h3>
+  <div class="row">
+  <div class="admin-container  col-md-4 col-12">
+    <div class="sm-container center card">
 
-    <img class="img-responsive" src="./../assets/Images/admin.jpg" draggable="false" alt="Admin-Image">
+    <img class="img-fluid card-img-top" src="./../assets/Images/admin.jpg" draggable="false" alt="Admin-Image">
 
-    <div class="change">
+    <div class="change card-body">
       <i class="fas fa-camera fa-2x text">
-
-    <!--<input  #ImageInput class="hidden-inpt" type="file" name="pic" accept=".jpg, .jpeg, .png">-->
-
       </i>
-
-
-
-
   </div>
   </div>
 </div>
+
 <!--end admin profile photo-->
 <div class="col-md-1"></div>
 <!--start main Info -->
@@ -25,19 +22,20 @@
 
 <div class="basic-info">
 
-<h4 class="header">Basic Info</h4>
+<h4 class="header head">Basic Info</h4>
 
 <!--start div name -->
 <div class="sm-content">
-<div class="name  test form-group">
+<div class="name  remove-hidden form-group">
 
   <div class="cont">
-    <i class="fas fa-user-plus fa-lg"></i>
     <label for="Admin-name">Admin :</label>
     <span id="Admin-name" class=""> {{Admin.Name}} </span>
-    <i class="fas fa-edit icn"></i>
+    <i class="fas fa-edit icn" (click)="openInputs($event)"></i>
 
   </div>
+<!--end div cont-->
+
 <input  id="name" name="name" class="form-control inpt hidden" required minlength="4" [(ngModel)]="Admin.Name" #name="ngModel">
 <!--start error message-->
 <!--<div *ngIf="fname.invalid && fname.dirty"
@@ -52,9 +50,9 @@
 
 </div>-->
 <!--end error message-->
-  <div *ngIf="name.invalid && name.dirty" class="alert alert-danger danger">
+  <div *ngIf="name.invalid && name.dirty" class="danger">
       <div [hidden]="! name.errors.required">
-                 Names Required
+                 Name Required
       </div>
       <div  [hidden]="! name.errors.minlength">
                 At Least 4 Character
@@ -63,12 +61,12 @@
 </div>
 <!--end first name div-->
 
-<div class="Email test form-group">
+<div class="Email remove-hidden form-group">
 
 <div class="cont">
-<label for="Email">Email :</label>
+<label for="Email">Email : </label>
 <span id="Email" class="Admin-Email">{{Admin.Email}}</span>
-<i class="fas fa-edit icn"></i>
+<i class="fas fa-edit icn" (click)="openInputs($event)"></i>
 </div>
 
 
@@ -111,18 +109,18 @@
 
 
 <div class="Contact-info">
-  <h4 class="header">Contact Info</h4>
+  <h4 class="header head">Contact Info</h4>
 
 
-  <div class="sm-content">
-<div class="phone form-group">
+<div class="sm-content">
+<div class="phone form-group remove-hidden">
   <div class="cont">
 <label for="phone">Phone:</label>
 <span  id="phone"class="Admin-phone">{{Admin.phone}}</span>
 <i class="fas fa-edit icn"></i>
   </div>
 
-   <input min="0" type="number" id="phone" name="phone" class="form-control hidden" required maxlength="12" [(ngModel)]="Admin.phone"  #phone="ngModel">
+   <input min="0" type="number" id="phone" name="phone" class="form-control inpt hidden" required maxlength="12" [(ngModel)]="Admin.phone"  #phone="ngModel">
 
         <div *ngIf="phone.invalid && phone.dirty" class="danger">
                 <div [hidden]="! phone.errors.required">
@@ -137,7 +135,7 @@
 </div>
 <!--end phone div-->
 
-  <div class="website form-group">
+  <div class="website remove-hidden form-group">
     <div class="cont">
 <label for="Website">Website</label>
 <span class="Admin-website">{{Admin.Website}} </span>
@@ -145,7 +143,7 @@
 
     </div>
 
-   <input id="website" name="website" class="form-control hidden" required pattern="www.?://.+" [(ngModel)] ="Admin.Website"  #website="ngModel">
+   <input id="website" name="website" class="form-control inpt hidden" required pattern="www.?://.+" [(ngModel)] ="Admin.Website"  #website="ngModel">
 
 <div *ngIf="website.invalid && website.dirty" class="danger">
                 <div [hidden]="! website.errors.required">
@@ -164,7 +162,7 @@
 
 
 <div class="bio form-group">
-<h4 class="header">Bio</h4>
+<h4 class="header head">Bio</h4>
 
 <div class="sm-content">
 
@@ -175,7 +173,7 @@
 
     </div>
 
-   <textarea cols="30" rows="10" id="Bio" name="Bio" class="form-control hidden" required maxlength="250" [(ngModel)]="Admin.Bio"  #Bio="ngModel" (keyup)="validteTexrArea()">
+   <textarea cols="30" rows="10" id="Bio" name="Bio" class="form-control inpt hidden" required maxlength="250" [(ngModel)]="Admin.Bio"  #Bio="ngModel" (keyup)="valid2()">
      </textarea>
   <p id="remaind"></p>
 </div>
@@ -185,18 +183,23 @@
 
 <!--start change password-->
 <div class="password">
-  <h4 class="header">Changing Password</h4>
+  <h4 class="header head">Changing Password</h4>
+  <div class="sm-content">
+  <div class="cont">
 
-  <small>Last Upadted Sience 1/1/2017</small>
+  <span class="last-upated">Last Upadted Sience 1/1/2017</span>
+  <i class="fas fa-edit icn"></i>
+  </div>
 
-  <div class="old-pass">
+  <div class="hidden">
+    <div class="old-pass">
     <label for="password">Current password</label>
-  <input type="password" class="form-control hidden" name="password" [ngModel]="Admin.CurrentPass" required #CurrPass="ngModel">
+    <input type="password" class="form-control inpt" name="password" [ngModel]="Admin.CurrentPass" required #CurrPass="ngModel">
 
-  <small *ngIf="CurrPass.invalid && CurrPass.dirty">
+  <div class="danger" *ngIf="CurrPass.invalid && CurrPass.dirty">
         <small [hidden]='! CurrPass.errors.required'> </small>
         Password is required
-      </small>
+      </div>
   </div>
   <!--end Current password-->
 
@@ -204,33 +207,39 @@
   <div class="new-pass">
     <label>New password</label>
 
-    <input type="password" class="form-control hidden" id="NewPass" name="newPass" [ngModel]="Admin.NewPass" required
+    <input type="password" class="form-control inpt" id="NewPass" name="newPass" [ngModel]="Admin.NewPass" required
     #NewPass="ngModel" (keyup)="mismatch()">
 
-      <small *ngIf="NewPass.invalid && NewPass.dirty">
+      <div class="danger" *ngIf="NewPass.invalid && NewPass.dirty">
         <small [hidden]='! NewPass.errors.required'> </small>
         NewPass is required
-      </small>
+      </div>
 
 
 
     <label>Retype password</label>
-      <input class="form-control hidden" type="password" id="ConfirmPass" name="ConfrimPass" [ngModel]="Admin.ConfirmPass" required #ConfirmPass="ngModel" (keyup)="mismatch()">
+      <input class="form-control inpt" type="password" id="ConfirmPass" name="ConfrimPass" [ngModel]="Admin.ConfirmPass" required #ConfirmPass="ngModel" (keyup)="mismatch()">
+      <div class="mismatch danger" id="mismatch">
 
-
-      <small class="mismatch" id="mismatch">
-
-      </small>
+      </div>
 </div>
 <!--<end confirming new password-->
 
 
 </div>
+<!--end class hidden that hide the inputes field-->
+</div>
+<!--end div sm-content tat hold content-->
+</div>
+<!--end all password div "parent div"-->
 
-<input type="submit" id="btn" class="btn btn-primary hidden" [disabled]="!userUpdateInfoForm.form.valid">
+<input type="submit" id="confirm-btn" class="form-control hidden confirm-btn" [disabled]="!userUpdateInfoForm.form.valid">
 </form>
- </div>
 
+<!--don't forget to make model-->
+ </div>
+ </div>
+</div>
 
 </div>
 

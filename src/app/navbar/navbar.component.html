@@ -1,37 +1,64 @@
 
 
-<nav class="custom-nav">
+<nav class="custom-nav navbar row sticky-top">
 
 
-<i class="fa fa-align-justify fa fa-2x responsive" (click)="opensidebar()" aria-hidden="true"></i>
 
+<!--start brand name-->
+<div class="col-sm-5 col-2 c1">
 
-<div class="search">
-<input type="search" placeholder="Search.." onclick="">
-<a href="#" class="search-icon">
-<i class="fa fa-search" aria-hidden="true"></i>
-
+<a class="brand navbar-brand" href="#">
+<img class="img-responsive d-inline-block align-top" src=".././assets/Images/logo.png" alt="logo" draggable="false">
+<p class="brand-name capital">Bussniess<span class="in">-IN </span></p>
 </a>
+
+
+<button class="responsive" type="button" (click)="openSideBar()" id="btn-sidebar">
+<i class="fas fa-align-left fa-2x"></i>
+</button>
+
+
+
 </div>
+
+
+<div class="col-sm-4 col-2 c2">
+<!--start serch form -->
+<form class="search form-inline">
+<input type="search" class="form-control" placeholder="Search.." aria-label="Search" onclick="">
+<button href="#" class="search-icon" type="submit">
+<i class="fa fa-search" aria-hidden="true"></i>
+</button>
+</form>
+
+ </div>
+<!--end search form-->
+
+
+<!--start tools bar notfication and user-->
+<div class="col-sm-3 col-8 c3">
 
 <div class="tools">
 <div class="notfication dropdown">
-<i class="far fa-bell notfi-icon"></i>
-<span class="notfi-num">{{notfication}}</span>
-<!--<i class="fa fa-arrow-down" aria-hidden="true"></i>-->
-<div class="notfication-container list-item hide click-outside">
 
-<ul class="notfialtion-list" *ngFor="let notfi of notfication_list">
-  <li class="unstyled notfi-list">
+<i class="far fa-bell notfi-icon dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+</i>
 
+<!--number of notfications-->
+<span class="notfi-num badge badge-light">{{notfication}}</span>
+
+
+<div class="notfication-container dropdown-menu">
+  <a class="nav-link dropdown-toggle dropdown-item notfialtion-list" *ngFor="let notfi of notfication_list"  href="#">
     <i class="far fa-bell {{notfi.type}}" aria-hidden="true"></i>
-    <h4 class="notfcation-head {{notfi.type}}">{{notfi.head}}</h4>
+
+
+    <div class="notfication-info">
+<h4 class="notfcation-head {{notfi.type}}">{{notfi.head}}</h4>
     <p class="description">{{notfi.describtion}}</p>
+    </div>
 
-  </li>
-
-
-</ul>
+</a>
 <p class="read center">Read All Notficatons</p>
 </div>
 </div>
@@ -39,23 +66,31 @@
 <!--<end notfcation -->
 
 <div class="user dropdown">
-<!--<i class="fa fa-user-circle circle" aria-hidden="true"></i>
--->
-<img src="./../assets/Images/admin.jpg" alt="user-image" class="img-responsive admin-img">
-<!--<p class="Admin-name">{{Admin}}</p>-->
-<!--<i class="fa fa-arrow-down" aria-hidden="true"></i>-->
+
+<img src="./../assets/Images/admin.jpg" alt="user-image" class="img-responsive admin-img dropdown-toggle" href="#" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
 
-<div class="user-container hide list-item click-outside">
-<ul class="user-list" *ngFor="let user of User_list">
-<a routerLink="{{user.url}}"  routerLinkActive="active">
-<i class="{{user.icon}} user-icon"></i>
-<li class="unstyled user-lis">{{user.name}}</li>
-</a>
-</ul>
+
+<div class="user-container dropdown-menu">
+  <a class="dropdown-item user-list" *ngFor="let user of User_list"  href="#">
+    <i class="{{user.icon}} user-icon"></i>
+      {{user.name}}
+
+
+  </a>
 </div>
+
+<!--end dropdown-menu div -->
+
+
 
 </div>
 </div>
 <!--<end tool div> -->
+</div>
+
+
+
+
 </nav>
+

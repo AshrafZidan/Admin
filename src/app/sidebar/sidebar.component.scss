@@ -3,72 +3,27 @@ $hoverColor:#ff6a07;
 
 .sidebar
 {
+    // padding-top: 56px;
 
-width: 240px;
 color:#ffffff;
 background: #fff url('../.././assets/Images/05.jpg')50% 50% no-repeat;
 background-size:cover;
 height: 100vh;
 position: fixed;
-z-index: 7;
-top: 0;
-left: 0;
+z-index: 5;
+top: 0px;
+left:0;
 bottom: 0;
+
+width: 20%;
+
 .overlay{
-// background: linear-gradient(45deg,#1a2a6c,#b21f1f,.8) ;
 background: rgba(7,34,62,.8);
-
-height: 100vh;
+height: 100%;
+width: 100%;
+padding-top: 56px;
 
 }
-
-.brand{
-cursor: pointer;
-background: #061e38;
-    box-shadow: 0 5px 5px -4px rgba(0,0,0,.25);
-    padding-top: 10px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-
-img{
-width: 50px;
-height:  50px;
-display: inline-block;
-
-vertical-align:middle;
-// border-style: none;
-}
-
-h3{
-  display:inline-block;
-  // font-family:$main-font;
-  letter-spacing: 1.5px;
-  // margin-right: 25px;
-  font-size: 24px;
-  .in{
-    color: $hoverColor;
-    font-weight: bold;
-    font-size: 20px;
-  }
-}
-}
-// .user{
-//   // padding: 10px;
-//   // width: 100%;
-// .admin-img
-// {
-// width:50px;
-// height: 50px;
-// display: inline-block;
-// border-radius:50%;
-// vertical-align:top;
-// float: left;
-// }
-// .admin-name{
-// font-family:$main-font;
-// letter-spacing: 2px;
-// }
-// }
 
 
 }
@@ -105,7 +60,6 @@ color:#ffffff
   padding: 15px;
   margin: 0;
   margin-bottom: 7px;
-
 -moz-transition:all .4s ease-in-out;
 -o-transition:all .4s ease-in-out;
 -webkit-transition:all .4s ease-in-out;
@@ -153,9 +107,25 @@ font-size: 20px;
 }
 
 /* mobile */
-@media only screen and (max-width: 998px) {
+
+@media  (max-width: 992px){
+.sidebar{
+// width:240px
+.list{
+    font-size: 14px !important;
+
+}
+i{
+  font-size: 16px !important;
+  margin-right: 0 !important;
+  width:20px;
+}
+}
+}
+
+@media only screen and (max-width: 768px) {
     .sidebar{
-      display: none;
+      left: -300px;
     }
 
 }

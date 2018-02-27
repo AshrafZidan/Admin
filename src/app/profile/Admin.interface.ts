@@ -9,6 +9,4 @@ export interface Admin  {
       CurrentPass:string;
       NewPass:string;
       ConfrimPass:string;
-
-
-    }
+}

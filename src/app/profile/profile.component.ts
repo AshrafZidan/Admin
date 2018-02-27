@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.openInputs();
+    // this.openInputs();
     this.Admin = {
       Name:'Ashraf Zidan',
       Email:'AshrafZidan996@gmail.com',
@@ -30,6 +30,7 @@ export class ProfileComponent implements OnInit {
       NewPass:'',
       ConfrimPass:''
     }
+
   }
 
   // Here we are implementing the submitForm function. All we are doing for right now is spitting out the details of the form to our console.
@@ -38,22 +39,21 @@ export class ProfileComponent implements OnInit {
     console.log(form);
   }
 
+  valid2(){
+    var valid = document.getElementById('Bio');
+    var show = document.getElementById('remaind');
+    this.validteTexrArea(valid,250,show);
+  }
 
   //function to validate Text Area
-  validteTexrArea(){
-    var len = 0;
-    len = $('#Bio').val().length;
-
-    var remaind = $('#remaind');
-    console.log(len);
-
-
-    var max = 250;
-    if (len <= max) {
-      remaind.text("Remaining characters : " + ( max - len ))
+  validteTexrArea(input , Max , shownText){
+    var input = input.value;
+    if (input.length <= Max) {
+      shownText.innerText = ("Remaining characters : " + ( Max - input.length  ));
+      return false;
 
     } else {
-
+      return true;
     }
   }
 
@@ -84,36 +84,22 @@ export class ProfileComponent implements OnInit {
   }
 
   //function to open input when click on Edit Icon
-  openInputs(){
-   var  icon = $('.icn');
-   var p = $('.p');
+  public openInputs(e){
 
-  //  p.click(function (){
-  //   $(this).addClass('pp');
-  //  });
+   var $this = $(e.target);
 
-   //do this for every edit  icon
-   icon.click(function(){
-    var $this = $(this);
+   var hiddenInput =  $this.parent('.cont').parent('.remove-hidden').find('.inpt');
+    hiddenInput.toggleClass('hidden');
+    $('#confirm-btn').toggleClass('hidden');
 
+    if (! hiddenInput.hasClass('hidden') ) {
 
-     $this.parent('.cont').parent('.test').find('.inpt').toggleClass('hidden');
-    // console.log("Clicked");
+      // $('#confirm-btn').addClass('hidden');
+      }
+    // else{
+    //   $('#confirm-btn').addClass('hidden');
 
-    if (! $this.parent('.cont').parent('.test').find('.inpt').hasClass('hidden')) {
+    // }
 
-      $('#btn').removeClass('hidden');
-      // console.log('true');
-
-
-    }
-    else{
-      $('#btn').addClass('hidden');
-
-    }
-
-   });
-
-
-  }
+}
 }

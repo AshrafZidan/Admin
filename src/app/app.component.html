@@ -1,19 +1,18 @@
-<div class="containr">
-<div class="row" >
- <div class="col-md-2">
-   <app-sidebar></app-sidebar>
+<div id="MyContent"></div>
+<app-navbar (hideSideBar)="getVlaue($event)"></app-navbar>
+<div class="fluid-container">
 
-   </div>
-<!--call navbar-->
-<div class="col-md-10">
+<div class="row">
 
-<app-navbar></app-navbar>
+<div class="col-md-3">
+<app-sidebar></app-sidebar>
+</div>
 
-<router-outlet></router-outlet>
+
+  <div class="col-md-9 col-12" id="profile">
+  <app-profile></app-profile>
+  </div>
 
 </div>
 
 </div>
-
-<!-- row -->
-</div> <!-- container -->
